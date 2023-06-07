@@ -1,0 +1,12 @@
+<div class="contenedor-principal">
+  <div class="contenedor-presupuesto">
+    <h1 class="text-center fontTitle">Ingrese Presupuesto</h1>
+    <div class="text-center" id="error"></div>
+    <input class="my-2 fontTitle" 
+            type="number" [(ngModel)]="cantidad" 
+            placeholder="Ingrese presupuesto" 
+            
+            />
+    <button class="btn btn-primary fontTitle" (click)="agregar()">ACEPTAR</button>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<form [formGroup]="forms">
+    <div class="row p-4">
+        <h1 class="text-center">Ingresar Gasto</h1>
+        <div id="error" class="mensaje"></div>
+        <hr>
+        <label for="gasto">Gasto</label>
+        <input id="gasto" 
+                type="text" 
+                placeholder="Ej: Comida"
+                formControlName="gasto"
+                >
+        <label for="cantidad">Cantidad</label>
+        <input id="cantidad" 
+                type="number" 
+                placeholder="Ej: Comida"
+                formControlName="cantidad"
+                >
+        <button class="btn btn-primary mt-2" (click)="agregarGasto()">Agregar Gasto</button>
+    </div>
+</form>
+
+
+
