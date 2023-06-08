@@ -14,12 +14,14 @@ export class PresupuestoService {
 
   setPresupuesto(presupuesto: number)
   {
-    this.presupuesto = this.presupuesto + presupuesto;
+    this.presupuesto = presupuesto;
+    this.presupuestoRestante = presupuesto;
   }
-  setPresupuestoRestante(gasto: number)
+  setPresupuestoRestante(gasto: number):boolean
   {
     if(this.presupuestoRestante>gasto){
-      this.presupuestoRestante = this.presupuestoRestante-gasto;
+      this.presupuestoRestante = this.presupuestoRestante - gasto;
+      console.log(this.presupuestoRestante)
       return true;
     }
     return false;

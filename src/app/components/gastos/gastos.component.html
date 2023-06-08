@@ -4,11 +4,12 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-lg-6">
-                    <app-ingresar-gasto (lista)="lista"></app-ingresar-gasto>
-                    {{lista | json}}
+                    <app-ingresar-gasto (gasto)="addGasto($event)"></app-ingresar-gasto>
                 </div>
                 <div class="col-lg-6">
-                    <app-listar-gasto ></app-listar-gasto>
+                    <h2>Presupuesto Inicial: {{presupuesto | currency}}</h2>
+                    <h2>Presupuesto Restante: {{restante | currency}} </h2>
+                    <app-listar-gasto [listaMostrar] = "listaGastos" ></app-listar-gasto>
                 </div>
             </div>
         </div>

@@ -8,8 +8,13 @@ import { Component, Input } from '@angular/core';
 })
 export class ListarGastoComponent {
 
+  @Input() listaMostrar: any;
+
+  constructor(){
+    this.verLista()
+  }
   
-
- 
-
+  verLista(){
+    console.log(this.listaMostrar);
+  }
 }
